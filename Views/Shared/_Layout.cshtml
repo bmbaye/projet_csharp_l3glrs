@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - gestion_commandes</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/gestion_commandes.styles.css" asp-append-version="true" />
+    <link href="/css/site.css" rel="stylesheet" />
+    <link href="/css/tailwind.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <header>
+        <nav class="shadow-lg p-4 mx-auto w-full md:w-2/3 rounded-lg" , style="width: 95%; margin: 30px; background-color: rgb(217 249 157 / var(--tw-bg-opacity, 1));">
+            <div class="flex items-center justify-between"/>                
+                <div class="hidden md:flex space-x-8", style="width: 90%">
+                    @* <a  class="text-slate-950 hover:text-dark-500" asp-controller =""  style="color: black">Suivi de mes commandes</a> *@
+                    <a href="#" class="text-slate-950 hover:text-dark-500"  style="color: black">Commandes</a>
+                    <a href="#" class="text-slate-950 hover:text-dark-500"  style="color: black">Commandes recues</a>
+                    <a href="@Url.Action("Index", "Produit", new {userId = 4})" class="text-slate-950 hover:text-dark-500" style="color: black">Produits</a>
+                    <a href="#" class="text-slate-950 hover:text-dark-500"  style="color: black">Livreurs</a>
+                    <a href="#" class="text-slate-950 hover:text-dark-500"  style="color: black">Livraisons</a>
+                    @* <a href="#" class="text-slate-950 hover:text-dark-500"  style="color: black">Clients</a> *@
+                    <a href="#" class="text-slate-950 hover:text-dark-500"  style="color: black">Historique paiements</a>
+                </div>
+
+                <div class="flex items-center space-x-6">
+                    <button class="relative text-gray-700 hover:text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4m-.4 8a1 1 0 100 2h12a1 1 0 100-2H7zm-2 5a1 1 0 100-2 1 1 0 000 2zm14 0a1 1 0 100-2 1 1 0 000 2z" />
+                        </svg>
+                    </button>
+
+                    <button class="relative text-gray-700 hover:text-gray-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11.5a6.5 6.5 0 10-13 0v2.658c0 .379-.214.725-.595.937L3 17h5m7-3v1m-4-1v1m-2 4a2 2 0 104 0H9z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Profile Image -->
+                    <img src="https://via.placeholder.com/40" alt="Profile" class="w-10 h-10 rounded-full">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,18 @@
+# Exclure les fichiers Visual Studio
+.vs/
+*.vsidx
+*.user
+*.suo
+*.ipch
+
+# Exclure les fichiers de build
+bin/
+obj/
+
+# Exclure les fichiers liés à Node.js
+node_modules/
+
+# Exclure les fichiers de configuration locaux
+*.log
+*.cache
+*.csproj.user
